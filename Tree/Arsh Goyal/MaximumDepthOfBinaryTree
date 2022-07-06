@@ -1,0 +1,13 @@
+// Remember one thing that sometimes it consider maximum number of nodes to be height or depth of binary tree
+// or sometimes no of edges so read and clearly understand quesion first
+
+
+class Solution {
+public:
+    int maxDepth(TreeNode* root) {
+        if(root==NULL)
+            return 0;
+        
+        return max((maxDepth(root->left)),(maxDepth(root->right)))+1;
+    }
+};
